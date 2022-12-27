@@ -1,4 +1,4 @@
-<div class="navbar-container">
+<div class="navbar-container" (window:resize)="resizeNavbar()">
 	<div class="logo-container">
 		<div class="logo">
 			<h1>eu</h1>
@@ -6,23 +6,19 @@
 		</div>
 	</div>
 
-	<div class="search-bar-container">
-		<div class="search-bar">
+	<div class="search-bar-container" #searchContainer>
+		<div class="search-bar" #searchBar>
 			<img src="assets/icons/search.svg" alt="" />
 			<input type="text" placeholder="SEARCH" />
 		</div>
 	</div>
 
-	<div class="nav-buttons">
+	<div class="nav-buttons" #navButtons>
 		<div class="lang">
 			<img class="flag" src="assets/icons/usa-flag.svg" alt="" />
 			<a>
 				<span>EN</span>
-				<img
-					class="icon"
-					src="assets/icons/caret-down-white.svg"
-					alt=""
-				/>
+				<img class="icon" src="assets/icons/caret-down-white.svg" alt="" />
 			</a>
 		</div>
 
@@ -33,22 +29,14 @@
 			<a>
 				<div class="account-dropdown">
 					<span class="text">MY ACCOUNT</span>
-					<img
-						class="icon"
-						src="assets/icons/caret-down-white.svg"
-						alt=""
-					/>
+					<img class="icon" src="assets/icons/caret-down-white.svg" alt="" />
 				</div>
 			</a>
 		</div>
 
 		<div class="saved">
 			<a>
-				<img
-					class="icon"
-					src="assets/icons/bookmark-filled-white.svg"
-					alt=""
-				/>
+				<img class="icon" src="assets/icons/bookmark-filled-white.svg" alt="" />
 				<span class="text">SAVED</span>
 			</a>
 		</div>
