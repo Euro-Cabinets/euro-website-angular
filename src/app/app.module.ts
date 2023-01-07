@@ -7,9 +7,11 @@ import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ShopComponent } from './pages/shop/shop.component';
+import { SearchBarComponent } from './components/navbar/search-bar/search-bar.component';
+import { NavButtonsComponent } from './components/navbar/nav-buttons/nav-buttons.component';
 
 @NgModule({
-	declarations: [AppComponent, HomeComponent, NavbarComponent, FooterComponent, ShopComponent],
+	declarations: [AppComponent, HomeComponent, NavbarComponent, FooterComponent, ShopComponent, SearchBarComponent, NavButtonsComponent],
 	imports: [BrowserModule, AppRoutingModule],
 	providers: [],
 	bootstrap: [AppComponent],

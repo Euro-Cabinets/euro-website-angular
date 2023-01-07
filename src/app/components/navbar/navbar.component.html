@@ -1,51 +1,14 @@
-<div class="navbar-container" (window:resize)="resizeNavbar()">
+<div class="navbar-container">
 	<div class="logo-container">
+		<!--
 		<div class="logo">
-			<h1>eu</h1>
-			<h2>cabinets</h2>
+			<span class="large">eu</span>
+			<span class="small">cabinets</span>
 		</div>
+	-->
 	</div>
 
-	<div class="search-bar-container" #searchContainer>
-		<div class="search-bar" #searchBar>
-			<img src="assets/icons/search.svg" alt="" />
-			<input type="text" placeholder="SEARCH" />
-		</div>
-	</div>
+	<app-search-bar></app-search-bar>
 
-	<div class="nav-buttons" #navButtons>
-		<div class="lang">
-			<img class="flag" src="assets/icons/usa-flag.svg" alt="" />
-			<a>
-				<span>EN</span>
-				<img class="icon" src="assets/icons/caret-down-white.svg" alt="" />
-			</a>
-		</div>
-
-		<div class="account">
-			<a class="account-name">
-				<span>Sign In</span>
-			</a>
-			<a>
-				<div class="account-dropdown">
-					<span class="text">MY ACCOUNT</span>
-					<img class="icon" src="assets/icons/caret-down-white.svg" alt="" />
-				</div>
-			</a>
-		</div>
-
-		<div class="saved">
-			<a>
-				<img class="icon" src="assets/icons/bookmark-filled-white.svg" alt="" />
-				<span class="text">SAVED</span>
-			</a>
-		</div>
-
-		<div class="cart">
-			<a>
-				<img class="icon" src="assets/icons/cart-white.svg" alt="" />
-				<span class="text">CART</span>
-			</a>
-		</div>
-	</div>
+	<app-nav-buttons></app-nav-buttons>
 </div>
