@@ -4,7 +4,11 @@
 	background-color: #2a292e;
 
 	display: grid;
-	grid-template-columns: calc((100% - 960px) / 2) minmax(auto, 960px) calc((100% - 960px) / 2); // TODO: Math the center of the grid
+
+	@sides: calc((100% - 960px) / 2);
+	@margin: 20px;
+
+	grid-template-columns: @sides auto 450px;
 }
 
 //----------------//
