@@ -1,0 +1,30 @@
+@height: 32px;
+
+.dropdown-button {
+	display: flex;
+	justify-content: space-between;
+
+	height: @height;
+	border: 0.5px solid #f0f2f6;
+	padding: 0 10px;
+
+	.text {
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 15px;
+
+		letter-spacing: 0px;
+		line-height: @height;
+
+		color: #2a292e;
+	}
+
+	.caret {
+		position: relative;
+
+		img {
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+}

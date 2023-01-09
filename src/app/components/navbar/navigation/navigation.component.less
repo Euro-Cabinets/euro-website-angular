@@ -1,0 +1,53 @@
+@containerHeight: 36px;
+
+.full-container {
+	height: @containerHeight;
+
+	background-color: #f6f7f9;
+
+	.content {
+		width: 960px;
+		margin: 0 auto;
+	}
+
+	.button {
+		position: relative;
+		display: inline-block;
+		transition: background-color 200ms ease-in-out;
+
+		font-family: Arial, Helvetica, sans-serif;
+		font-weight: bold;
+		font-size: 13px;
+		color: black;
+
+		text-transform: uppercase;
+		text-align: center;
+
+		width: 110px;
+		line-height: @containerHeight;
+
+		&:hover {
+			background-color: #e100ff;
+			cursor: pointer;
+		}
+
+		&.special {
+			background-color: #b4a89a;
+			color: white;
+
+			&:hover {
+				background-color: #e100ff;
+			}
+		}
+
+		.icon {
+			position: absolute;
+			right: 5px;
+			top: 50%;
+			transform: translateY(-50%);
+
+			width: 10px;
+			background-color: black;
+		}
+	}
+}
