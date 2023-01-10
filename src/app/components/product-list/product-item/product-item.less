@@ -1,3 +1,5 @@
+@import "_mixins.less";
+
 @radius: 3px;
 
 .product-item {
@@ -15,8 +17,25 @@
 	}
 
 	.product-photo {
+		width: 239px;
+		height: 248px;
+
 		position: relative;
+
 		border-radius: @radius;
 		overflow: hidden;
+
+		.photo {
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			opacity: 0;
+			transition: opacity 200ms ease-in-out;
+
+			&.active {
+				opacity: 1;
+			}
+		}
 	}
 }

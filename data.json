@@ -1,0 +1,17 @@
+{
+	"products": [
+		{
+			"id": 0,
+			"item-code": "BS",
+			"item-name": "base shelf",
+			"description": "1 Cabinet, 1 Door, 1 Adjustable Shelf, Adjustable Legs",
+			"min-width": 24,
+			"max-width": 32,
+			"min-height": 34.5,
+			"max-height": 34.5,
+			"min-depth": 24,
+			"max-depth": 24,
+			"price": 231.4
+		}
+	]
+}

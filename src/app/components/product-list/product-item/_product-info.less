@@ -1,3 +1,5 @@
+@import "_mixins.less";
+
 .product-info {
 	vertical-align: top;
 	padding-left: 25px;
@@ -27,5 +29,80 @@
 		font-size: 13px;
 		line-height: 15px;
 		color: #2a292e;
+	}
+
+	.dimensions {
+		display: grid;
+		grid-template-columns: repeat(3, 120px);
+		grid-gap: 3px;
+
+		margin: 15px 0px;
+
+		.col {
+			.text {
+				display: block;
+				padding-left: 5px;
+
+				color: #505050;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 14px;
+				line-height: 16px;
+			}
+			.value {
+				display: inline-block;
+
+				color: #2a292e;
+				font-size: 15px;
+				line-height: 17px;
+				font-family: Arial, Helvetica, sans-serif;
+				font-weight: bold;
+
+				padding: 3px;
+				margin: 2px;
+
+				&.enabled {
+					outline: 0.5px solid #777777;
+					border-radius: 3px;
+
+					padding-right: 30px;
+					padding-left: 5px;
+					margin-left: 0px;
+
+					.caret();
+				}
+			}
+		}
+	}
+
+	.notes {
+		@height: 24px;
+		.text {
+			display: block;
+
+			color: #505050;
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 14px;
+			line-height: 16px;
+
+			padding-left: 5px;
+			padding-bottom: 2px;
+		}
+		.dropdown {
+			width: 140px;
+			height: 24px;
+
+			outline: 0.5px solid #777777;
+			border-radius: 3px;
+
+			color: #2a292e;
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 15px;
+			font-weight: bold;
+			line-height: @height;
+
+			padding-left: 5px;
+
+			.caret();
+		}
 	}
 }

@@ -26,14 +26,16 @@
 		width: 30px;
 		height: 30px;
 
-		background-image: linear-gradient(
-			to top left,
-			transparent 50%,
-			black 0
-		);
+		clip-path: polygon(0 0, 100% 0, 0 100%);
+
+		background-color: black;
 
 		.icon {
 			margin: 3px;
+		}
+
+		&:hover {
+			cursor: pointer;
 		}
 	}
 
@@ -67,17 +69,17 @@
 				transition: opacity 200ms ease-in-out;
 			}
 
-			.ico-active {
+			.icon-active {
 				opacity: 0;
 			}
 
 			&.active {
 				background-color: black;
 
-				.ico-active {
+				.icon-active {
 					opacity: 1 !important;
 				}
-				.ico-normal {
+				.icon-normal {
 					opacity: 0 !important;
 				}
 			}
@@ -86,10 +88,10 @@
 				cursor: pointer;
 				background-color: black;
 
-				.ico-active {
+				.icon-active {
 					opacity: 1;
 				}
-				.ico-normal {
+				.icon-normal {
 					opacity: 0;
 				}
 			}
