@@ -1,0 +1,98 @@
+.options-container {
+	z-index: 2;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+
+	opacity: 0;
+	transition: opacity 200ms ease-in-out;
+
+	font-family: "Courier New", Courier, monospace;
+	font-size: 16px;
+	color: black;
+
+	&:hover {
+		opacity: 1;
+	}
+
+	.zoom {
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		width: 30px;
+		height: 30px;
+
+		background-image: linear-gradient(
+			to top left,
+			transparent 50%,
+			black 0
+		);
+
+		.icon {
+			margin: 3px;
+		}
+	}
+
+	.view-type-container {
+		position: absolute;
+		left: 0px;
+		bottom: 0px;
+
+		.view-select {
+			position: relative;
+
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+
+			transition: background-color 200ms ease-in-out;
+
+			.icon {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translateX(-50%) translateY(-50%);
+
+				width: 15px;
+				height: 15px;
+
+				background-position: center;
+				background-size: contain;
+				background-repeat: no-repeat;
+
+				transition: opacity 200ms ease-in-out;
+			}
+
+			.ico-active {
+				opacity: 0;
+			}
+
+			&.active {
+				background-color: black;
+
+				.ico-active {
+					opacity: 1 !important;
+				}
+				.ico-normal {
+					opacity: 0 !important;
+				}
+			}
+
+			&:not(.active):hover {
+				cursor: pointer;
+				background-color: black;
+
+				.ico-active {
+					opacity: 1;
+				}
+				.ico-normal {
+					opacity: 0;
+				}
+			}
+		}
+	}
+}
