@@ -1,31 +1,58 @@
 <div class="product-item">
 	<div class="product-photo">
 		<div class="options-container">
-			<div class="zoom">
+			<div class="zoom" (click)="onViewZoom()">
 				<img
 					class="icon"
-					src="http://via.placeholder.com/12.png/000000/FFFFFF" />
+					src="http://via.placeholder.com/12/000000/FFFFFF" />
 			</div>
 			<div class="view-type-container">
-				<div class="view-select icon-1 active">
-					<div class="icon ico-active"></div>
-					<div class="icon ico-normal"></div>
+				<div
+					class="view-select icon-1"
+					[ngClass]="{'active': activeViewType == 1}"
+					(click)="onViewTypeChange(1)">
+					<div class="icon icon-active"></div>
+					<div class="icon icon-normal"></div>
 				</div>
-				<div class="view-select icon-2">
-					<div class="icon ico-active"></div>
-					<div class="icon ico-normal"></div>
+				<div
+					class="view-select icon-2"
+					[ngClass]="{'active': activeViewType == 2}"
+					(click)="onViewTypeChange(2)">
+					<div class="icon icon-active"></div>
+					<div class="icon icon-normal"></div>
 				</div>
-				<div class="view-select icon-3">
-					<div class="icon ico-active"></div>
-					<div class="icon ico-normal"></div>
+				<div
+					class="view-select icon-3"
+					[ngClass]="{'active': activeViewType == 3}"
+					(click)="onViewTypeChange(3)">
+					<div class="icon icon-active"></div>
+					<div class="icon icon-normal"></div>
 				</div>
-				<div class="view-select icon-4">
-					<div class="icon ico-active"></div>
-					<div class="icon ico-normal"></div>
+				<div
+					class="view-select icon-4"
+					[ngClass]="{'active': activeViewType == 4}"
+					(click)="onViewTypeChange(4)">
+					<div class="icon icon-active"></div>
+					<div class="icon icon-normal"></div>
 				</div>
 			</div>
 		</div>
-		<img src="http://via.placeholder.com/239x248.png" />
+		<img
+			class="photo"
+			[ngClass]="{'active': activeViewType == 1}"
+			src="http://via.placeholder.com/239x248/F6F7F9" />
+		<img
+			class="photo"
+			[ngClass]="{'active': activeViewType == 2}"
+			src="http://via.placeholder.com/239x248/FF0000" />
+		<img
+			class="photo"
+			[ngClass]="{'active': activeViewType == 3}"
+			src="http://via.placeholder.com/239x248/00FF00" />
+		<img
+			class="photo"
+			[ngClass]="{'active': activeViewType == 4}"
+			src="http://via.placeholder.com/239x248/0000FF" />
 	</div>
 
 	<div class="product-info">
@@ -37,12 +64,45 @@
 		<p class="description">
 			1 Cabinet, 1 Door, 1 Adjustable Shelf, Adjustable Legs
 		</p>
+		<div class="dimensions">
+			<div class="col">
+				<span class="text">Width</span>
+				<div
+					class="value"
+					[ngClass]="{'enabled' : isWidthEnabled}"
+					(click)="onWidthClick()">
+					24"
+				</div>
+			</div>
+			<div class="col">
+				<span class="text">Height</span>
+				<div
+					class="value"
+					[ngClass]="{'enabled' : isHeightEnabled}"
+					(click)="onHeightClick()">
+					34 1/2"
+				</div>
+			</div>
+			<div class="col">
+				<span class="text">Depth</span>
+				<div
+					class="value"
+					[ngClass]="{'enabled' : isDepthEnabled}"
+					(click)="onDepthClick()">
+					24"
+				</div>
+			</div>
+		</div>
+		<div class="notes">
+			<span class="text">Notes</span>
+			<div class="dropdown" (click)="onNotesDropdown()">None</div>
+		</div>
 	</div>
 
 	<div class="cart-function">
 		<div class="qty">
 			<span>QTY</span>
-			<div class="dropdown"></div>
+			<div class="dropdown" (click)="onQtyDropdown()">1</div>
 		</div>
 		<div class="price">
 			<span class="currency">$</span>
@@ -50,7 +110,7 @@
 			<span class="sub">40</span>
 		</div>
 		<div class="add-to-cart">
-			<button>Add To Cart</button>
+			<button (click)="onAddToCart()">Add To Cart</button>
 		</div>
 	</div>
 </div>
