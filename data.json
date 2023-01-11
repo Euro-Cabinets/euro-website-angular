@@ -11,7 +11,64 @@
 			"max-height": 34.5,
 			"min-depth": 24,
 			"max-depth": 24,
-			"price": 231.4
+			"price": 231.4,
+			"category": 0
+		},
+		{
+			"id": 1,
+			"item-code": "BG",
+			"item-name": "base garbage",
+			"description": "1 Cabinet, 1 Face, 1 Double-Bin Garbage, Adjustable Legs",
+			"min-width": 18,
+			"max-width": 24,
+			"min-height": 34.5,
+			"max-height": 34.5,
+			"min-depth": 24,
+			"max-depth": 24,
+			"price": 725.1,
+			"category": 0
+		},
+		{
+			"id": 2,
+			"item-code": "BLB",
+			"item-name": "base le-mans blind",
+			"description": "1 Cabinet, 1 Door, 1 Face, 1 Le-Mans System, Adjustable Legs",
+			"min-width": 42,
+			"max-width": 51,
+			"min-height": 34.5,
+			"max-height": 34.5,
+			"min-depth": 24,
+			"max-depth": 24,
+			"price": 952.8,
+			"category": 0
+		},
+		{
+			"id": 3,
+			"item-code": "WS",
+			"item-name": "wall shelf",
+			"description": "1 Cabinet, 1 Door, 2 Adjustable Shelves",
+			"min-width": 21,
+			"max-width": 34,
+			"min-height": 24,
+			"max-height": 37,
+			"min-depth": 12,
+			"max-depth": 12,
+			"price": 345.2,
+			"category": 0
+		},
+		{
+			"id": 4,
+			"item-code": "T3D",
+			"item-name": "tall 3 drawer",
+			"description": "2 Cabinets, 1 Door, 3 Drawers (All Inside), 1 Fixed Shelf, 2 Adjustable Shelves, Adjustable Legs",
+			"min-width": 18,
+			"max-width": 21,
+			"min-height": 90,
+			"max-height": 110,
+			"min-depth": 24,
+			"max-depth": 24,
+			"price": 1205.2,
+			"category": 0
 		}
 	]
 }
