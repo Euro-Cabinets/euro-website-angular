@@ -1,0 +1,42 @@
+@import "./_mixins.less";
+
+.dropdown-mouseleave {
+	@outline-width: 250px;
+
+	&.visible {
+		display: block;
+	}
+
+	display: none;
+
+	position: absolute;
+	top: 0px;
+
+	z-index: 2;
+
+	opacity: 0;
+	width: calc(100% + (@outline-width*2));
+	padding: @outline-width 0;
+	box-sizing: content-box;
+	margin: -@outline-width;
+
+	background-color: red;
+
+	@_: @outline-width;
+	clip-path: polygon(
+		0 0,
+		100% 0,
+		100% @_,
+		@_ @_,
+		@_ calc(100% - @_),
+		calc(100% - @_) calc(100% - @_),
+		calc(100% - @_) @_,
+		100% @_,
+		100% 100%,
+		0 100%
+	);
+
+	.filler {
+		height: @height;
+	}
+}

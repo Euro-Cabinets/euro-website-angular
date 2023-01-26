@@ -1,6 +1,54 @@
 <div class="dropdown-button">
-	<span class="text">{{ text }}</span>
-	<div class="caret">
-		<img src="http://via.placeholder.com/11.png" />
+	<div class="main-item" (click)="toggleDropdown()">
+		<span class="text" [ngClass]="{ 'bold' : !selectedItem }"
+			>{{ !!selectedItem ? selectedItem : defaultText }}</span
+		>
+		<div class="caret">
+			<img src="http://via.placeholder.com/11.png" />
+		</div>
+	</div>
+
+	<div
+		class="dropdown-list"
+		[ngClass]="{
+			'visible' : isDropdownActive,
+			'multi' : multiActiveDropdown
+		}">
+		<div
+			class="dropdown-item-container item"
+			*ngFor="let option of options;">
+			<div
+				class="dropdown-item"
+				(click)="dropdownSelect(option)"
+				[ngClass]="{ 'multi-off' : multiActiveDropdown != option && isMultiActive,
+					'active' : selectedItem == option
+					|| multiActiveDropdown == option }">
+				<span class="text">{{ option }}</span>
+			</div>
+
+			<div
+				class="multi-dropdown"
+				[ngClass]="{
+					'visible' : multiActiveDropdown == option}">
+				<div
+					class="dropdown-item item"
+					(click)="multidropdownSelect(option, 1)">
+					<span class="text">5/8" Thickness</span>
+				</div>
+				<div
+					class="dropdown-item item"
+					(click)="multidropdownSelect(option, 2)">
+					<span class="text">3/4" Thickness</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div
+		class="dropdown-mouseleave"
+		(mouseleave)="closeDropdown()"
+		[ngClass]="{ 'visible' : isDropdownActive }">
+		<div class="filler"></div>
+		<div class="filler" *ngFor="let option of options"></div>
 	</div>
 </div>
