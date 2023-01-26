@@ -31,7 +31,6 @@ export class MatDropdownComponent {
 	}
 
 	closeDropdown() {
-		this.reset();
 		this.isDropdownActive = false;
 	}
 
@@ -57,6 +56,6 @@ export class MatDropdownComponent {
 
 	multidropdownSelect(option: string, index: number) {
 		this.selectedItem = option;
-		this.isDropdownActive = false;
+		this.closeDropdown();
 	}
 }

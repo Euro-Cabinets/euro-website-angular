@@ -5,6 +5,19 @@
 
 	height: @height;
 
+	::-webkit-scrollbar {
+		width: 4px;
+		background-color: white;
+	}
+	::-webkit-scrollbar-thumb {
+		background: #2a292e;
+	}
+	::-webkit-resizer,
+	::-webkit-scrollbar-button,
+	::-webkit-scrollbar-corner {
+		display: none;
+	}
+
 	.main-item {
 		position: relative;
 		justify-content: space-between;
@@ -62,6 +75,9 @@
 
 		z-index: 4;
 		opacity: 0;
+
+		max-height: @height*10;
+		overflow-y: auto;
 
 		width: 100%;
 

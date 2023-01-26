@@ -46,7 +46,7 @@
 
 	<div
 		class="dropdown-mouseleave"
-		(mouseleave)="closeDropdown()"
+		(mousemove)="closeDropdown()"
 		[ngClass]="{ 'visible' : isDropdownActive }">
 		<div class="filler"></div>
 		<div class="filler" *ngFor="let option of options"></div>
