@@ -1,6 +1,7 @@
 .navbar-container {
 	width: 100%;
 	height: 80px;
+	min-width: 1360px;
 	background-color: #2a292e;
 
 	display: grid;
@@ -8,7 +9,7 @@
 	@sides: calc((100% - 960px) / 2);
 	@margin: 20px;
 
-	grid-template-columns: @sides auto 450px;
+	grid-template-columns: @sides auto 450px minmax(0px, 200px);
 }
 
 //----------------//
