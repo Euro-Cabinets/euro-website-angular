@@ -95,7 +95,10 @@
 						"styles": ["src/styles.less"],
 						"scripts": []
 					}
-				}
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
+        }
 			}
 		}
 	},
