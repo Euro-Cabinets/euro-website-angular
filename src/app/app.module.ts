@@ -13,6 +13,8 @@ import { NavigationComponent } from './components/navbar/navigation/navigation';
 import { SearchBarComponent } from './components/navbar/search-bar/search-bar';
 import { ProductItemComponent } from './components/product-list/product-item/product-item';
 import { ProductListComponent } from './components/product-list/product-list';
+import { SideCartComponent } from './components/side-cart/side-cart';
+import { SideCartItemComponent } from './components/side-cart/side-cart-item/side-cart-item';
 import { HomeComponent } from './pages/home/home';
 import { ShopComponent } from './pages/shop/shop';
 
@@ -31,6 +33,8 @@ import { ShopComponent } from './pages/shop/shop';
 		FilterSectionComponent,
 		ProductListComponent,
 		ProductItemComponent,
+		SideCartComponent,
+		SideCartItemComponent,
 	],
 	imports: [BrowserModule, AppRoutingModule],
 	providers: [],
