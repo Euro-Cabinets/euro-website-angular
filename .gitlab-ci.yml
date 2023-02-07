@@ -1,16 +1,18 @@
 # The Docker image that will be used to build your app
-image: node:lts
-# Functions that should be executed before the build script is run
-before_script:
-    - npm install angular-cli
+image: node:18.13.0
 pages:
-    script:
-        - ng deploy
-    artifacts:
+    cache:
         paths:
-            # The folder that contains the files to be exposed at the Page URL
-            - public
-    rules:
-        # This ensures that only pushes to the default branch will trigger
-        # a pages deploy
-        - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
+            - node_modules/
+	script:
+		- npm install -g @angular/cli@6.2.1
+  		- npm install
+  		- ng build
+	artifacts:
+		paths:
+			# The folder that contains the files to be exposed at the Page URL
+			- public
+	rules:
+		# This ensures that only pushes to the default branch will trigger
+		# a pages deploy
+		- if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
